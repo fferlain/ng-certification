@@ -1,0 +1,17 @@
+<div class="well">
+
+  <form [formGroup]="zipForm" (ngSubmit)="onSubmit()">
+    <h2>Enter a zipcode:</h2>
+    <input
+      class="form-control"
+      placeholder="Zipcode"
+      type="text"
+      formControlName="zipcode">
+    <br>
+    
+    <div class="btn-group" role="group">
+      <button class="btn btn-primary" type="submit" [disabled]="zipcode?.invalid">Add location</button>
+    </div>
+  </form>
+
+</div>

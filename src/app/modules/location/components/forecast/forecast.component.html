@@ -1,0 +1,18 @@
+<div class="panel panel-default" *ngIf="forecast && list">
+  <div class="panel-heading">
+    <h3 class="panel-title">5-day forecast for {{ forecast.city.name }}</h3>
+  </div>
+
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let fc of forecast.list">
+      {{ fc.dt_txt | date: 'EEEE, MMM d' }}:
+      Monday, Mar 23:
+      {{ fc.weather[0].main}}
+      - Min: {{ fc.main.temp_min }}
+      - Max: {{ fc.main.temp_max }}
+
+      <img class="icon float-end" src="/assets/images/{{fc.image}}" style="height: 2em" (click)="test(fc)">
+    </li>
+  </ul>
+</div>
+<button class="btn btn-success" tabindex="0" id="mainPageBtn" (click)="goBack()">&lt; Back to main page</button>
