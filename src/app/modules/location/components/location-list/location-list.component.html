@@ -1,6 +1,7 @@
 <app-helper></app-helper>
 
-<app-location-add></app-location-add>>
+<app-location-add></app-location-add>
+
 <div *ngFor="let location of locations$ | async">
   <app-location-item [location]="location"></app-location-item>
 </div>
