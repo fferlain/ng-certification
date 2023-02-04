@@ -5,7 +5,7 @@ import { StorageService } from '../../../../services/storage.service';
 @Component({
   selector: 'app-location-item',
   templateUrl: './location-item.component.html',
-  styleUrls: ['./location-item.component.scss']
+  styleUrls: ['./location-item.component.css']
 })
 export class LocationItemComponent implements OnInit {
 
